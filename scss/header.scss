@@ -29,5 +29,228 @@
 		padding: 25px;
 		border: 1px solid #bbbbbb;
 		border-top: none;
+		padding-right: 42px;
+		@media (max-width: $md1+px) {
+			padding: 25px 10px;
+		}
+		@media (max-width: $md2+px) {
+			padding: 10px 10px;
+			border: none;
+			padding: 10px 0;
+		}
 	}
+
+	&__logo {
+		&_2 {
+			@media (max-width: $md2+px) {
+				height: 20px;
+				picture {
+				}
+				img {
+					height: 30px;
+					width: 50px;
+				}
+			}
+		}
+	}
+
+	&__logo-img {
+	}
+
+	&__bottom {
+	}
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__functional {
+		display: flex;
+	}
+	.navigation-link,
+	&__item {
+		position: relative;
+		padding-right: 25px;
+		&::before {
+			content: "";
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			background: url("../img/header/basket.svg") center/ contain no-repeat;
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			@media (max-width: $md4+px) {
+				/* width: 15px;
+				height: 15px; */
+			}
+		}
+		@media (max-width: $md4+px) {
+			padding-right: 20px;
+		}
+	}
+	&__item {
+		margin-left: 30px;
+		@media (max-width: $md1+px) {
+			margin-left: 20px;
+		}
+		@media (max-width: $md4+px) {
+			margin-left: 10px;
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+		&_wish {
+			&::before {
+				background-image: url(../img//header/heart.svg);
+			}
+		}
+		&_login {
+			&::before {
+				background-image: url(../img//header/user.svg);
+			}
+		}
+		&_cart {
+			&::before {
+				background-image: url(../img//header/basket.svg);
+			}
+		}
+	}
+	&__label {
+		@media (max-width: $md2+px) {
+			display: none;
+		}
+	}
+	&__label,
+	.navigation-link,
+	&__item {
+		display: inline-flex;
+		align-items: center;
+		color: #8d8d8d !important;
+		font-family: "Montserrat";
+		font-weight: 100;
+		font-size: 24px;
+		@media (max-width: $md1+px) {
+			font-size: 20px;
+		}
+	}
+
+	.navigation {
+		flex: 0 1 65%;
+		@media (max-width: $md2+px) {
+			flex: 0 1 30%;
+		}
+		@media (max-width: $md3+px) {
+			flex: 0 1 30px;
+		}
+		&-button-toggler {
+			width: 30px;
+		}
+		&-item {
+			display: inline-flex;
+			align-items: center;
+		}
+		&-link {
+			@media (max-width: $md2+px) {
+				span {
+					display: none;
+				}
+			}
+			&_shop {
+				@media (min-width: $md1+px) {
+					padding-left: 0;
+				}
+
+				&::before {
+					background-image: url(../img/header/store.svg);
+					@media (max-width: $md2+px) {
+						right: 10px;
+					}
+				}
+			}
+			&_info {
+				&::before {
+					background-image: url(../img/header/info.svg);
+					@media (max-width: $md2+px) {
+						right: 10px;
+					}
+				}
+			}
+			&_free {
+				&::before {
+					background-image: url(../img/header/price.svg);
+					@media (max-width: $md2+px) {
+						right: 10px;
+					}
+				}
+			}
+		}
+		&-btn {
+			@media (max-width: $md2+px) {
+			}
+		}
+		.navigation-inline-form {
+			@media (max-width: $md2+px) {
+				width: 250px;
+			}
+		}
+		&-input {
+			width: auto;
+			margin-left: 10px;
+			font-size: 16px;
+			height: 40px;
+			padding: 7px 32px 7px 12px;
+			@media (max-width: $md1+px) {
+				width: 200px;
+			}
+			@media (max-width: $md2+px) {
+				width: 100%;
+				margin-left: 0;
+				max-width: 250px;
+			}
+			&::placeholder {
+				color: #8d8d8d !important;
+			}
+		}
+
+		.navigation-inline-form .navigation-btn {
+			border-left: 1px solid #dee2e6 !important;
+			border-radius: 0;
+		}
+	}
+	.navigation-body {
+		justify-content: flex-start !important;
+	}
+	.navigation-body-section {
+		margin-left: 15px;
+		padding-right: 0px;
+		@media (max-width: $md2+px) {
+			margin-left: 0;
+			padding-left: 10px;
+		}
+	}
+	.navigation-body-header {
+		@media (min-width: $md2+px) {
+			display: none;
+		}
+	}
+}
+
+input[type="text"]::-ms-clear {
+	display: none;
+	width: 0;
+	height: 0;
+}
+input[type="text"]::-ms-reveal {
+	display: none;
+	width: 0;
+	height: 0;
+}
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+	display: none;
 }
