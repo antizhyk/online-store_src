@@ -29,5 +29,106 @@
 		padding: 25px;
 		border: 1px solid #bbbbbb;
 		border-top: none;
+		padding-right: 42px;
+	}
+
+	&__logo {
+		&_2 {
+		}
+	}
+
+	&__logo-img {
+	}
+
+	&__bottom {
+	}
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__functional {
+		display: flex;
+	}
+	.navigation-link,
+	&__item {
+		position: relative;
+		padding-right: 25px;
+		&::before {
+			content: "";
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			background: url("../img/header/basket.svg") center/ contain no-repeat;
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+	&__item {
+		margin-left: 20px;
+		&_wish {
+			&::before {
+				background-image: url(../img//header/heart.svg);
+			}
+		}
+		&_login {
+			&::before {
+				background-image: url(../img//header/user.svg);
+			}
+		}
+		&_cart {
+			&::before {
+				background-image: url(../img//header/basket.svg);
+			}
+		}
+	}
+	&__label,
+	.navigation-link,
+	&__item {
+		display: inline-flex;
+		align-items: center;
+		color: #8d8d8d !important;
+		font-family: "Montserrat - Thin";
+		font-size: 26px;
+	}
+
+	.navigation {
+		flex: 0 1 60%;
+		&-item {
+			display: inline-flex;
+			align-items: center;
+		}
+		&-link {
+			&_shop {
+				&::before {
+					background-image: url(../img/header/store.svg);
+				}
+			}
+			&_info {
+				&::before {
+					background-image: url(../img/header/info.svg);
+				}
+			}
+			&_free {
+				&::before {
+					background-image: url(../img/header/price.svg);
+				}
+			}
+		}
+		&-input {
+			width: auto;
+			margin-left: 10px;
+		}
+
+		.navigation-inline-form .navigation-btn {
+			border-left: 1px solid #dee2e6 !important;
+			border-radius: 0;
+		}
+	}
+	.navigation-body {
+		justify-content: flex-start !important;
 	}
 }
