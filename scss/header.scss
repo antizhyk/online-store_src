@@ -7,10 +7,18 @@
 		padding: 15px 0;
 		border-left: 1px solid #bbbbbb;
 		border-right: 1px solid #bbbbbb;
+		border-bottom: 1px solid #bbbbbb;
+		display: flex;
+		justify-content: center;
+		@media (max-width: $md2+px) {
+			display: none;
+		}
 	}
 
 	&__logo {
 		text-align: center;
+		display: inline-block;
+		margin: 0 auto;
 	}
 
 	&__logo-img {
@@ -20,5 +28,6 @@
 	&__bottom {
 		padding: 25px;
 		border: 1px solid #bbbbbb;
+		border-top: none;
 	}
 }
