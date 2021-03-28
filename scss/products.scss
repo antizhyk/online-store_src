@@ -11,7 +11,7 @@
             grid-template-columns: repeat(2, 1fr);
         }
         @media (max-width: 670px) {
-            grid-template-columns: repeat(1, 1fr);
+            display: block;
             max-width: 450px;
             margin: 0 auto;
         }
@@ -24,6 +24,12 @@
         justify-content: flex-start;
         color: #000000;
         padding-bottom: 10px;
+        @media (max-width: 670px) {
+            margin-bottom: 15px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
     }
     &__block {
         display: flex;
@@ -52,5 +58,47 @@
     &__price {
         font-family: Montserrat;
         padding: 0 5px 5px 5px;
+    }
+
+    &__pagination {
+        padding: 25px 0;
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @media (max-width: $md4+px) {
+            display: none;
+        }
+        &_alt {
+            display: none;
+            @media (max-width: $md4+px) {
+                display: flex;
+            }
+        }
+
+        li {
+            margin: 0 7.5px;
+        }
+    }
+
+    &__arrow {
+        display: inline-block;
+        height: 15px;
+        width: 15px;
+        &_prev {
+            background: url("../img/icons/arrow_l.svg") center/ contain no-repeat;
+            transform: rotate(180deg);
+        }
+
+        &_next {
+            background: url("../img/icons/arrow_l.svg") center/ contain no-repeat;
+        }
+    }
+
+    &__num {
+        color: #606060;
+        font-size: 18px;
     }
 }

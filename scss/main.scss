@@ -1,5 +1,9 @@
 .main {
     &__container {
+        @media (max-width: 340px) {
+            max-width: 290px;
+            margin: 0 auto;
+        }
     }
 
     &__row {
