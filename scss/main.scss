@@ -1,17 +1,35 @@
 .main {
     &__container {
+        @media (max-width: 340px) {
+            max-width: 290px;
+            margin: 0 auto;
+        }
     }
 
     &__row {
         display: flex;
-        height: 300px;
+        @media (max-width: $md2+px) {
+            display: block;
+        }
+    }
+    .miniside {
+        display: none;
+        @media (max-width: $md2+px) {
+            display: block;
+            border-bottom: 1px solid #bbbbbb;
+            margin-bottom: 10px;
+        }
     }
     .products {
-        flex: 0 0 calc(100% - 300px);
-        background-color: yellow;
+        flex: 0 0 calc(100% - 250px);
+        @media (max-width: $md2+px) {
+            flex: 0 0 100%;
+        }
     }
     .sidebar {
-        flex: 0 0 300px;
-        background-color: green;
+        flex: 0 0 250px;
+        @media (max-width: $md2+px) {
+            display: none;
+        }
     }
 }

@@ -1,0 +1,66 @@
+.miniside {
+    &__container {
+    }
+
+    &__content {
+    }
+
+    &__title {
+        font-size: 20px;
+        padding: 20px;
+        border: 1px solid #dddddd;
+        cursor: pointer;
+        border-bottom: 1px solid #bbbbbb !important;
+        position: relative;
+        &::before {
+            content: "";
+            width: 15px;
+            height: 15px;
+            position: absolute;
+            display: inline-block;
+            background: url("../img/icons/arrow.svg") center/ contain no-repeat;
+            top: calc(50% - 7.5px);
+            right: 10px;
+            transform: rotate(-90deg);
+        }
+    }
+    &__content,
+    &__wrap {
+        display: block !important;
+        height: auto !important;
+        padding: 0 !important;
+        ._active {
+            border-bottom: none !important;
+            &::before {
+                transform: rotate(90deg) !important;
+            }
+        }
+    }
+
+    &__block {
+        position: static;
+        min-width: 100%;
+        li {
+            border-right: none !important;
+            border-left: none !important;
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+    .sidebar {
+        &__list {
+            li {
+                //border: none;
+                border-right: 1px solid #bbbbbb;
+                border-left: 1px solid #bbbbbb;
+            }
+        }
+
+        &__link {
+            border: none;
+            padding: 20px;
+            font-size: 16px;
+        }
+    }
+}
