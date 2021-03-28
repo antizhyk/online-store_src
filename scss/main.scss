@@ -1,0 +1,17 @@
+.main {
+    &__container {
+    }
+
+    &__row {
+        display: flex;
+        height: 300px;
+    }
+    .products {
+        flex: 0 0 calc(100% - 300px);
+        background-color: yellow;
+    }
+    .sidebar {
+        flex: 0 0 300px;
+        background-color: green;
+    }
+}
