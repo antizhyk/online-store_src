@@ -1,6 +1,9 @@
 .slider {
     height: 450px;
     margin-bottom: 90px;
+    @media (max-width: $md2+px) {
+        margin-bottom: 30px;
+    }
     @media (max-width: $md3+px) {
         height: 350px;
     }

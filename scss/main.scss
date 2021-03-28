@@ -4,12 +4,28 @@
 
     &__row {
         display: flex;
+        @media (max-width: $md2+px) {
+            display: block;
+        }
+    }
+    .miniside {
+        display: none;
+        @media (max-width: $md2+px) {
+            display: block;
+        }
     }
     .products {
         flex: 0 0 calc(100% - 300px);
         background-color: yellow;
+        height: 500px;
+        @media (max-width: $md2+px) {
+            flex: 0 0 100%;
+        }
     }
     .sidebar {
         flex: 0 0 300px;
+        @media (max-width: $md2+px) {
+            display: none;
+        }
     }
 }
