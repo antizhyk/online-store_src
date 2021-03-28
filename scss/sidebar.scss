@@ -1,0 +1,57 @@
+.sidebar {
+    border: 1px solid #bbbbbb;
+    &__list {
+        li {
+            height: 50px;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #bbbbbb;
+            background-color: #fff;
+        }
+    }
+
+    &__link {
+        color: #8d8d8d;
+        width: 100%;
+        font-size: 18px;
+    }
+}
+.spoiler {
+    &__wrap {
+        position: relative;
+        &:hover {
+            .spoiler__block {
+                display: block;
+            }
+        }
+    }
+
+    &__title {
+        position: relative;
+        &::before {
+            content: "";
+            width: 15px;
+            height: 15px;
+            background: url("../img/icons/arrow_l.svg") center / contain no-repeat;
+            position: absolute;
+            top: calc(50% - 7.5px);
+            right: 0;
+        }
+    }
+
+    &__block {
+        display: none;
+        position: absolute;
+        left: 100%;
+        top: -1px;
+        width: 300px;
+        border: 1px solid #bbbbbb;
+        li {
+            &:last-child {
+                border-bottom: none;
+                height: 49px;
+            }
+        }
+    }
+}

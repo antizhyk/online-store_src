@@ -4,7 +4,6 @@
 
     &__row {
         display: flex;
-        height: 300px;
     }
     .products {
         flex: 0 0 calc(100% - 300px);
@@ -12,6 +11,5 @@
     }
     .sidebar {
         flex: 0 0 300px;
-        background-color: green;
     }
 }
