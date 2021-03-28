@@ -153,6 +153,9 @@
 			align-items: center;
 		}
 		&-link {
+			@media (min-width: $md2+px) {
+				margin-left: 15px;
+			}
 			@media (max-width: $md2+px) {
 				span {
 					display: none;
@@ -224,8 +227,11 @@
 		justify-content: flex-start !important;
 	}
 	.navigation-body-section {
-		margin-left: 15px;
+		margin-left: 30px;
 		padding-right: 0px;
+		@media (max-width: $md1+px) {
+			margin-left: 15px;
+		}
 		@media (max-width: $md2+px) {
 			margin-left: 0;
 			padding-left: 10px;
