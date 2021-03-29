@@ -17,6 +17,7 @@
 //</FORM>====================================================================================================
 
 //<BUTTONS (a.btn+tab)>====================================================================================================
+
 .btn {
 	display: inline-flex;
 	align-items: center;
@@ -26,13 +27,25 @@
 	border: 2px solid #000;
 	border-radius: 8px;
 	color: #000;
+
 	@media (min-width: 992px) {
 		&:hover {
 		}
 	}
+
 	&._fw {
 		width: 100%;
 	}
+}
+.form-connection__btn {
+	border: 1px solid #727272;
+	height: 35px;
+	padding: 0 25px;
+	border-radius: 0;
+	background-color: #fff;
+	position: relative;
+	display: inline-block;
+	background: url("../img/icons/send.svg") 50% 51%/ 500% no-repeat;
 }
 //</BUTTONS>====================================================================================================
 

@@ -1,5 +1,178 @@
-footer{}
 //====================================================================================================
+.footer {
+    margin-top: 10px;
+    @media (max-width: 340px) {
+        max-width: 305px;
+        margin: 0 auto;
+    }
+    &__content {
+        border: 1px solid #bbbbbb;
+    }
+
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        @media (max-width: $md2+px) {
+            flex-direction: column;
+        }
+        @media (max-width: $md4+px) {
+            flex-direction: column;
+            padding-top: 10px;
+        }
+    }
+
+    &__row {
+        flex: 0 0 68%;
+        display: flex;
+        //justify-content: space-between;
+        padding: 20px 30px;
+        @media (max-width: $md2+px) {
+            padding: 10px 10px;
+            flex-wrap: wrap;
+            flex: 0 0 100%;
+        }
+        @media (max-width: $md3+px) {
+            justify-content: space-between;
+        }
+        @media (max-width: $md4+px) {
+            padding: 0;
+        }
+    }
+
+    &__item {
+        flex: 0 0 33%;
+        margin-right: 30px;
+        &:last-child {
+            margin-right: 0;
+        }
+        @media (max-width: $md2+px) {
+            flex: 0 0 30%;
+            margin-bottom: 10px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        @media (max-width: $md3+px) {
+            flex: 0 1 32%;
+        }
+        @media (max-width: 660px) {
+            flex: 0 1 45%;
+        }
+        @media (max-width: $md4+px) {
+            flex: 0 0 100%;
+            margin-right: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+    }
+
+    &__title {
+        font-size: 20px;
+        color: #727272;
+        font-family: Montserrat;
+        margin-bottom: 10px;
+        @media (max-width: $md1+px) {
+            font-size: 18px;
+        }
+    }
+
+    &__list {
+        li {
+            margin-bottom: 8px;
+        }
+    }
+
+    &__link {
+        color: #727272;
+        font-size: 18px;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__connection {
+        padding: 15px;
+        border-left: 1px solid #bbbbbb;
+        @media (max-width: $md2+px) {
+            border-left: none;
+            border-top: 1px solid #bbbbbb;
+        }
+        @media (max-width: $md4+px) {
+            padding: 0;
+            padding-top: 10px;
+        }
+    }
+
+    &__form {
+    }
+
+    &__block {
+        display: flex;
+        justify-content: center;
+        font-size: 28px;
+        font-family: Monsterat;
+        @media (max-width: $md1+px) {
+            flex-wrap: wrap;
+            span {
+                display: none;
+            }
+        }
+    }
+
+    &__sublist {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        li {
+            margin: 0 7.5px;
+        }
+    }
+
+    &__link-icon {
+        display: inline-flex;
+        align-items: center;
+        svg {
+            width: 20px;
+            height: 20px;
+        }
+        &_you {
+            svg {
+                transform: translateY(2.5px);
+            }
+        }
+    }
+}
+.form-connection {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    @media (max-width: $md1+px) {
+        flex-wrap: wrap;
+    }
+    &__label {
+        font-size: 22px;
+        color: #727272;
+        font-family: Montserrat;
+        margin-right: 10px;
+        @media (max-width: $md1+px) {
+            font-size: 18px;
+            margin-bottom: 5px;
+            flex: 0 0 100%;
+        }
+    }
+    &__input {
+        border: 1px solid #727272;
+        height: 35px;
+        font-size: 17px;
+        @media (max-width: $md1+px) {
+            flex: 0 0 calc(100% - 70px);
+        }
+    }
+    &__btn {
+    }
+}
 
 //====================================================================================================
-
